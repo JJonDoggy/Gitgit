@@ -31,6 +31,7 @@ __정말... 열심히 해야겠다는 생각이드네요..__
 
 [Taikowiki] : https://taiko.wiki/
 
+- [자바스크립트](https://grateful-bench-a4e.notion.site/f136ccf6ced34d58b75dd083309aea9b)
 
 마지막으로 제가 하고 싶은 말이 있는데요
 ```
