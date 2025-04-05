@@ -36,6 +36,17 @@ if ehwang > 0:
 print('입니다.')
 
 
+# 리스트
+
+# 변수명 = [값1, 값2, 값3 ...]
+# print(변수명[0]) ==> 값1     이런식으로 인덱스에 접근 가능
+
+wons = [50000, 10000, 5000, 1000]
+for won in wons:
+    print(f'{won}원 권 : {req_money // won}장')
+    req_money = req_money % won 
+# 리스트를 알고나면 이렇게 작성하는게 훨씬 좋음!
+
 # 5. 상점 할인 계산
 
 total = 0
@@ -78,3 +89,11 @@ for n in range(1,student+1):
     else:
         grade = 'F'
     print(f'{n}번째 학생의 등급은 {grade}입니다.')
+
+# 8. 주유 횟수 계산
+
+D = int(input('이동거리(km) 입력 ==> '))
+N = int(input('연비(R(km) / full) 입력 ==> '))
+
+print(f'이동하려는 거리가 {D}km이고, 연비가{N}km/full일 때, ', end='')       # end='' 그 뒤 출력값과 이어서 출력
+print(f'주유는 {D//N}번 필요합니다.')
