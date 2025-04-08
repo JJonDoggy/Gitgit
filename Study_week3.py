@@ -14,4 +14,22 @@ for i in range(1, star+1):
 
 star=int(input())
 for i in range(1,star+1):
-    print(" " * (star - i) + "*" * i)
+    print(" " * (star - i) + "*" * i)        # f-string 사용시 불 필요한 공백이 생기는 것 주의!! 
+
+
+# A + B - 3 (10950번)
+
+T = int(input())
+
+for i in range(1, T+1):
+    A, B = map(int, input().split())
+    print(A + B)
+
+# 코딩은 체육과목 입니다 (25314번)
+
+N = int(input())
+
+multiply_num = N // 4 
+
+print('long ' * multiply_num + 'int')
+
