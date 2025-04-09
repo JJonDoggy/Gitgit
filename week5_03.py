@@ -14,6 +14,8 @@ while True:
             break
 
 
+# 이거 보다는 밑 처럼 조건도 변수에 저장하는 걸 추천
+
 is_long_enough = len(password) >= 8
 is_having_digit = any(i.isdigit() for i in password)
 is_having_alpha = any(i.isalpha() for i in password)
