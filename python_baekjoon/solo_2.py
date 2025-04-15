@@ -49,6 +49,7 @@ print(melody + 1)
 
 
 # 5355번 - 화성 수학
+
 T = int(input())
 
 for a in range(T):
@@ -64,3 +65,97 @@ for a in range(T):
             result = result - 7
     print(f'{result:.2f}')
 
+
+# 2675번 - 문자열 반복
+
+T = 0
+times = int(input())
+for i in range(times):
+    attempt, string = input().split()
+    attempt = int(attempt)
+    T = len(string)
+    list(string)
+    for a in range(T):
+        print(f'{string[a] * attempt}', end='')
+    print()
+
+
+# 2935번 - 소음
+A = int(input())
+how = input()
+B = int(input())
+if how == '*':
+    print(A*B)
+elif how == '+':
+    print(A+B)
+
+
+# 9498번 - 시험 성적
+
+score = int(input())
+if 90 <= score <= 100:
+    print('A')
+elif 80 <= score <= 89:
+    print('B')
+elif 70 <= score <= 79:
+    print('C')
+elif 60 <= score <= 69:
+    print('D')
+else:
+    print('F')
+
+
+# 10817번 - 세 수
+
+# 내가 생각한 풀이
+a, b, c = map(int, input().split())
+total = a + b + c
+maximum = max(a, b, c)
+minimum = min(a, b, c)
+mid = total - maximum - minimum
+print(mid)
+
+# gpt가 알려준 풀이
+nums = list(map(int, input().split()))
+nums.sort()
+print(nums[1])
+
+# sort()를 쓰면 큰 순서대로 정렬
+# 
+# 또는 if문을 사용한 풀이도 가능
+a, b, c = map(int, input().split())
+
+if (a >= b and a <= c) or (a <= b and a >= c):
+    print(a)
+elif (b >= a and b <= c) or (b <= a and b >= c):
+    print(b)
+else:
+    print(c) 
+
+
+# 11653번 - 소인수분해
+Num = int(input())
+divide = 2
+while True:
+    if (Num % divide) == 0:
+        print(divide)
+        Num /= divide
+    else:
+        divide += 1
+    
+    if Num <= 1:
+        break
+
+
+# 1789번 - 수들의 합
+n_num = int(input())
+count = 0
+i = 1
+total = 0
+
+while (total + i) <= n_num:
+    total += i
+    i += 1
+    count += 1
+
+print(count)
