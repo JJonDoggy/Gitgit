@@ -159,3 +159,34 @@ while (total + i) <= n_num:
     count += 1
 
 print(count)
+
+
+# 2753번 - 윤년
+year = int(input())
+if (year % 4) == 0 and (year % 100) != 0:
+    print('1')
+elif (year % 4 ) == 0 and (year % 400) == 0:
+    print('1')
+else:
+    print('0')
+
+
+# 10039번 - 평균 점수
+
+score = []
+for a in range(5):
+    score.append(int(input()))
+    if score[a] < 40: 
+        score[a] = 40
+    
+print(int(sum(score) / 5))
+
+
+# 1934번 - 최소공배수
+import math
+
+T = int(input())
+for i in range(T):
+    A, B = map(int, input().split())     # 최대공배수 공식 = 두수의 곱 / 최대공약수수
+    lcm = A * B // math.gcd(A, B)   # LCM(A, B) = A × B / GCD(A, B)
+    print(lcm)
