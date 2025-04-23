@@ -64,4 +64,99 @@ for n in range(N):
 print(max(result))
 
 
-# 갑자기 생각난 ver2
+# 2754번 - 학점계산
+
+grade = input()
+if grade == 'A+':
+    print(4.3)
+elif grade == 'A0':
+    print(4.0)
+elif grade == 'A-':
+    print(3.7)
+elif grade == 'B+':
+    print(3.3)
+elif grade == 'B0':
+    print(3.0)
+elif grade == 'B-':
+    print(2.7)
+elif grade == 'C+':
+    print(2.3)
+elif grade == 'C0':
+    print(2.0)
+elif grade == 'C-':
+    print(1.7)
+elif grade == 'D+':
+    print(1.3)
+elif grade == 'D0':
+    print(1.0)
+elif grade == 'D-':
+    print(0.7)
+elif grade == 'F':
+    print(0.0)
+
+
+# 2884번 - 알람 시계
+
+Hour, Min = map(int, input().split())
+setMin = Min - 45
+if setMin < 0:
+    setMin = 60 - (45 - Min)
+    Hour -= 1
+if Hour < 0:
+    Hour = 23
+print(Hour, setMin)
+
+
+# 7567번 - 그릇
+
+# 내가한 ㅂㅅ짓 (실패)
+height = 0
+overlap = 1
+
+case = input()
+case = list(case)
+case.append('c')
+b = case[0]
+
+
+for a in range(1, len(case)):
+    if a == len(case) - 1:
+        break
+    if a > 1:
+        if overlap == 1:
+            b = case[a+1]
+    if case[a] == b:
+        overlap += 1
+    elif case[a] != b:
+        if overlap >= 2:
+            height += 10 + ((overlap - 1) * 5)
+        else:
+            height += 20
+        overlap = 1
+if overlap >= 2:
+    height += 10 + ((overlap - 1) * 5)
+print(height)
+
+# 하도안풀려서 검색하거나 gpt물어본거 :
+dish = input()
+total = 10  # 첫 번째 접시는 무조건 10
+
+for i in range(1, len(dish)):
+    if dish[i] == dish[i-1]:
+        total += 5
+    else:
+        total += 10
+
+print(total)
+
+
+# 5063번 - TGN
+N = int(input())
+for i in range(N):
+    r, e, c = map(int, input().split())
+    if r > e - c:
+        print('do not advertise')
+    elif r == e - c:
+        print('does not matter')
+    elif r < e - c:
+        print('advertise')
