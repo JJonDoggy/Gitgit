@@ -1,0 +1,46 @@
+details {
+    color : grey;
+    font-size : 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    font-size : 18px;
+    line-height : 2.0;
+}
+
+.link {
+    font-size: 15px;
+}
+
+.toc {
+    width: 200px;
+    position: sticky;
+    top: 0;
+    height: 20vh;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-left: 1px solid #ccc;
+}
+
+.toc h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.toc ol {
+    list-style: none;
+    padding: 0;
+}
+
+.toc li {
+    margin-bottom: 10px;
+}
+
+#one {
+    color: brown;
+}
+
+#two {
+    color : #00f500;
+}
