@@ -1,3 +1,10 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
 details {
     color : grey;
     font-size : 12px;
@@ -12,6 +19,17 @@ li {
 .link {
     font-size: 15px;
 }
+
+
+
+#one {
+    color: brown;
+}
+
+#two {
+    color : #00f500;
+}
+
 
 .toc {
     width: 200px;
@@ -28,7 +46,7 @@ li {
     margin-top: 0;
 }
 
-.toc ol {
+.toc ul {
     list-style: none;
     padding: 0;
 }
@@ -37,10 +55,7 @@ li {
     margin-bottom: 10px;
 }
 
-#one {
-    color: brown;
-}
 
-#two {
-    color : #00f500;
+.contact {
+    font-weight: bolder;
 }

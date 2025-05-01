@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>부산 밥집 정리</title>
+    <link rel="stylesheet" href="./semantic.css">
 
     <header>
         <h1>📌부산 밥집 정리</h1>
-        <a href="#one">동아대(하단)주변 <br></a>
-        <a href="#two">부경대 / 경성대 주변</a>
-
+        <div class="toc">
+            <a href="#one">동아대(하단)주변 <br></a>
+            <a href="#two">부경대 / 경성대 주변</a>
+            <p class="contact">📞Contact <br> Discord : hyundol_ <br> Github : JJonDoggy</p>
+        </div>
         <hr>
     </header>
 </head>
 <body>
     <main>
-        <h2>동아대(하단)주변</h2>
+        <h2 id="one">동아대(하단)주변</h2>
         <ul>
             <li><b>화반(매우추천)</b></li>
             <details>
@@ -57,17 +60,33 @@
         
         <hr>
 
-        <h2>부경대 / 경성대 주변</h2>
+        <h2 id="two">부경대 / 경성대 주변</h2>
         <ul>
             <li>교토돈부리</li>
+            <details>
+                <summary>사진 보기/접기</summary>
+                <img src="./images/donburi.jpg" alt="규동" height="250">
+            </details>
             <li>미분당</li>
+            <details>
+                <summary>사진 보기/접기</summary>
+                <img src="./images/ricenoodle_mibun.jpg" alt="쌀국수" height="250">
+            </details>
             <li>이천 밥쌤</li>
             <li>중찬</li>
             <li>유일한식탁</li>
             <li>겐로쿠우동</li>
+            <details>
+                <summary>사진 보기/접기</summary>
+                <img src="./images/genroku.jpg" alt="겐로쿠 우동" height="250">
+            </details>
             <li>연어바치</li>
             <li>다온스시 & 덮밥</li>
         </ul>
     </main>
+    <hr>
+    <footer class="link">
+        <a href="https://naver.me/xX71fkzP" target="_blank">네이버 지도</a>
+    </footer>
 </body>
 </html>
