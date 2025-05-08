@@ -64,3 +64,59 @@ for _ in range(testCase):
         else:
             sequence = 0
     print(sum)
+
+
+# 9506번 - 약수들의 합
+# join 함수에대해.. join에서 쓸수있는건 문자열이기 때문에 map도 같이 써주었다.
+# 그리고 이걸 list로 처리한다는 아이디어.. 중요 ⭐
+
+while True:
+    N = int(input())
+    if N == -1:
+        break
+    measure = []
+    for a in range(1, N):
+        if N % a == 0:
+            measure.append(a)
+
+    if sum(measure) == N:
+        print(f'{N} = {' + '.join(map(str, measure))}')
+    else:
+        print(f'{N} is NOT perfect.')
+
+
+# 10162번 - 전자레인지
+A = 300
+B = 60
+C = 10
+
+A_attempt = 0
+B_attempt = 0
+C_attempt = 0
+
+sec = int(input())
+
+
+if sec < B:
+    C_attempt += sec // C
+    sec = sec % C
+
+elif sec < A:
+    B_attempt += sec // B
+    sec = sec % B
+    C_attempt += sec // C
+    sec = sec % C
+
+else:
+    A_attempt += sec // A
+    sec = sec % A
+    B_attempt += sec // B
+    sec = sec % B
+    C_attempt += sec // C
+    sec = sec % C
+
+if sec % C != 0:
+    print(-1)
+else:
+    print(f'{A_attempt} {B_attempt} {C_attempt}')
+
