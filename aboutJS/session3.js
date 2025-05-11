@@ -11,8 +11,9 @@ function calculate(input){
     const operatorArr = [];
 
     let number = 0;
-    let number2 = 0;
+    let number2 = 0;   // number2와 count는 내가 짠거
     let count = 0;
+    let afterPoint = 0;
     for(let i = 0; i < input.length; i++){
         const char = input[i]
         if(char === '+' || char === '-' || char === "*" || char === "/"){
@@ -20,10 +21,29 @@ function calculate(input){
 
             numberArr.push(number);
             number = 0;
-            
+            afterPoint = 0;    
+        }
+        /*
+        핫식스맨님이 설명해주신 코드
+        */
+        else if(char === '.'){
+            afterPoint = 1;
         }
 
-        else if(char === '.'){
+        else{
+            if(number === 0){
+                number = charToNum(char);
+            }
+            else if(afterPoint > 0){
+                number += 0.1 ** afterPoint * charToNum(char);
+                afterPoint++;
+            }
+            else{
+                number = number * 10 + charToNum(char);
+            }
+        }
+
+        else if(char === '.'){       // 소수 계산 (내가 짠거)
             for(let a = i+1; a < input.length; a++){
                 i++;
                 const afterPoint = input[a];
@@ -87,6 +107,7 @@ function calculate(input){
             }
         
         }
+
 
 
         else{
