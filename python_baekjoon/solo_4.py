@@ -120,3 +120,57 @@ if sec % C != 0:
 else:
     print(f'{A_attempt} {B_attempt} {C_attempt}')
 
+# 10103번 - 주사위 게임
+N = int(input())
+
+C_score = 100
+S_score = 100
+for _ in range(N):
+    C, S = map(int, input().split())
+    if C > S:
+        S_score = S_score - C
+    elif S > C:
+        C_score = C_score - S
+    elif C == S:
+        continue
+print(C_score)
+print(S_score)
+
+
+# 11557번 - Yangjojang of The Year
+T = int(input())         # dictionary 한 번 써봄!! 근데 진짜 되네!!
+dict = {}
+beerPig = 0
+for a in range(T):
+    N = int(input())
+    for b in range(N):
+        univ_name, L = input().split()
+        L = int(L)
+        dict[univ_name] = L
+        beerPig = max(dict.values())
+        reverse = {k:v for v,k in dict.items()}  # 기본적으로 key > value 방향으로만 접근 가능함. value값으로 key에 접근하기 위해 key와 value가 서로 바뀐 딕셔너리를 하나 더 만들었음.
+    print(reverse[beerPig])
+    dict = {}
+    beerPig = 0
+
+
+# 10214번 - baseball
+T = int(input())
+yScore = 0
+kScore = 0
+for a in range(T):
+    for b in range(9):
+        y, k = map(int, input().split())
+        yScore += y
+        kScore += k
+    if yScore > kScore:
+        print('Yonsei')
+    elif yScore < kScore:
+        print('Korea')
+    else:
+        print('Draw')
+
+
+# 10757번 - 큰 수 A+B
+A, B = map(int, input().split())
+print(A + B)
