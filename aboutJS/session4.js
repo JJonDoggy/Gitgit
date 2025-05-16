@@ -1,6 +1,6 @@
 // class 에 대해 알아보자···
 
-class Human{                    // class 기본 문법법
+class Human{                    // class 기본 문법
     constructor(name, age){
         this.name = name;
         this.age = age;
@@ -51,7 +51,13 @@ grade가 기본값 1
 class GoraechiIronSword extends IronSword{
     grade = 1;
     attribute;
-
+/*
+    1. new GoraechiIronSword();
+    2. GoraechiIronSword의 부모클래스인 IronSword에 대해 new IronSword()
+    3. IronSword의 부모클래스인 Sword에 대해 new Sword()해서 객체를 만듦
+    4. 만든 객체에 대해 IronSword의 constructor를 실행(없으면 무시)
+    5. GoraechiIronSword의 constructor를 실행
+    */
     constructor(name, attribute){
         super(name, '고래치'); // Sword의 constructor
         this.attribute = attribute;
