@@ -45,3 +45,14 @@ arr2.sort(reverse=True) # 만약 요소 값이 모두 같다면 그 다음 1번 
 print(arr2[0][3])
 print(arr1[0][3])
 
+
+# 2741번 - N 찍기
+N = int(input())
+for a in range(1, N+1):
+    print(a)
+
+
+# 2742번 - 기찍 N
+N = int(input())
+for a in range(N, 0, -1):
+    print(a)
