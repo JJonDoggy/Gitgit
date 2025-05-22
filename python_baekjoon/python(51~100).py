@@ -56,3 +56,32 @@ for a in range(1, N+1):
 N = int(input())
 for a in range(N, 0, -1):
     print(a)
+
+
+# 2440번 - 별 찍기 3
+starNum = int(input())
+for a in range(starNum, 0, -1):
+    print('*' * a)
+
+
+# 2441번 - 별 찍기 4
+starNum = int(input())
+blank = 0
+for a in range(starNum, 0, -1):
+    if a < starNum:
+        print(blank * ' ' + a * '*')
+        blank += 1
+    else:
+        print(a * '*')
+        blank += 1
+
+
+# 8393번 - 합
+num = int(input())
+total = 0
+for n in range(1, num+1):
+    total += n
+print(total)
+
+
+# 2609번 - 최대공약수와 최소공배수
