@@ -85,3 +85,33 @@ print(total)
 
 
 # 2609번 - 최대공약수와 최소공배수
+def gcd(a, b):       # 최대공약수 - 유클리드 호제법
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
+num1, num2 = map(int, input().split())
+print(gcd(num1, num2))
+print(lcm(num1, num2))
+
+
+# 2748번 - 피보나치 수 2
+def fibonacci(a):
+    mylist = []
+    for i in range(a+1):
+        if i == 0:
+            fibo = 0
+            mylist.append(fibo)
+        elif i == 1:
+            fibo = 1
+            mylist.append(fibo)
+        else:
+            fibo = mylist[i-1] + mylist[i-2]
+            mylist.append(fibo)
+    return mylist[a]
+
+n = int(input())
+print(fibonacci(n))
