@@ -115,3 +115,28 @@ def fibonacci(a):
 
 n = int(input())
 print(fibonacci(n))
+
+
+# 5565번 - 영수증
+total = int(input())
+b = 0
+for _ in range(9):
+    each = int(input())
+    b = b + each
+print(total - b)
+
+
+# 10984번 - 내 학점을 구해줘
+T = int(input())
+for a in range(T):
+    list1 = []
+    list2 = []
+    N = int(input())
+    for b in range(N):
+        C, G = map(float, input().split())
+        C = int(C)
+        list1.append(C)
+        list2.append(C * G)
+    print(sum(list1), end=' ')
+    print(f'{(sum(list2) / sum(list1)):.1f}')
+
