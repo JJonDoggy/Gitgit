@@ -140,3 +140,38 @@ for a in range(T):
     print(sum(list1), end=' ')
     print(f'{(sum(list2) / sum(list1)):.1f}')
 
+
+# 10833번 - 사과
+total = 0
+school = int(input())
+for a in range(school):
+    i = 1
+    student, apple = map(int, input().split())
+    while True:
+        if i * student > apple:
+            i -= 1
+            break
+        else:
+            i += 1
+    total += (apple - student * i)
+print(total)
+
+
+# 2442번 - 별 찍기 5
+star = int(input())
+for i in range(1, star+1):
+    print(' ' * (star - i) + '*' * (2 * i - 1) + ' ')
+
+
+# 2443번 - 별 찍기 6
+star = int(input())
+for i in range(star, 0, -1):
+    print(' ' * (star - i) + '*' * (2 * i - 1) + ' ')
+
+
+# 2444번 - 별 찍기 7
+star = int(input())
+for i in range(1, star+1):
+    print(' ' * (star - i) + '*' * (2 * i - 1) + ' ')
+for i in range(star-1, 0, -1):
+    print(' ' * (star - i) + '*' * (2 * i - 1) + ' ')
